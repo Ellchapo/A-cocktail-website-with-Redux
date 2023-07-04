@@ -40,17 +40,17 @@ const ProductDetails = () => {
        {loading?(<SpinnerAnim/>):(
         <Layout>
           <div className='container mt-4'>
-              <Link to='/' className='btn btn-info'>Go Back</Link>
+              <Link to='/' className='btn btn-success'>Go Back</Link>
               <div className='row mt-4'>
                 <div className='col-md-5'>
                   <img src={img} alt={name} height={300} width={300}></img>
                 </div>
                 <div className='col-md-5'>
-                    <h2>Name: {name}</h2>
-                    <p className='mt-1'>category: {category}</p>
-                    <p>Info : {info}</p>
-                    <p>Glass : {glass}</p>
-                    <p>Ingredients : {ingredients + ","}</p>
+                    <h2 className='text-success'>Name: {name}</h2>
+                    <p className='mt-1 text-success'>category: {category}</p>
+                    <p className='text-success'>Info : {info}</p>
+                    <p className='text-success'>Glass : {glass}</p>
+                    <p className='text-success'>Ingredients : {ingredients + ","}</p>
                 </div>
               </div>
           </div>

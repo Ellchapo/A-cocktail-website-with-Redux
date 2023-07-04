@@ -26,42 +26,42 @@ const cocktailSlice = createSlice({
       error:null,
       cocktail:[]
     },
-    extraReducers:{
-        [fetchCocktails.pending]:(state,action)=>{
+    extraReducers:(builder)=>{
+        builder.addCase(fetchCocktails.pending,(state,action)=>{
              state.loading = true;    
-        },
-        [fetchCocktails.fulfilled]:(state,action)=>{
+        })
+        .addCase(fetchCocktails.fulfilled,(state,action)=>{
             state.loading=false;
             state.cocktails=action.payload.drinks;
-        },
-        [fetchCocktails.rejected]:(state,action)=>{
+        })
+        .addCase(fetchCocktails.rejected,(state,action)=>{
             state.loading=false;
             state.error= action.payload;
-        },
+        })
 
-        [fetchCocktail.pending]:(state,action)=>{
+        .addCase(fetchCocktail.pending,(state,action)=>{
             state.loading = true;    
-       },
-       [fetchCocktail.fulfilled]:(state,action)=>{
+       })
+       .addCase(fetchCocktail.fulfilled,(state,action)=>{
            state.loading=false;
            state.cocktail=action.payload.drinks;
-       },
-       [fetchCocktail.rejected]:(state,action)=>{
+       })
+       .addCase(fetchCocktail.rejected,(state,action)=>{
            state.loading=false;
            state.error= action.payload;
-       },
+       })
 
-       [fetchSearchCocktails.pending]:(state,action)=>{
+       .addCase(fetchSearchCocktails.pending,(state,action)=>{
         state.loading = true;    
-   },
-   [fetchSearchCocktails.fulfilled]:(state,action)=>{
+   })
+   .addCase(fetchSearchCocktails.fulfilled,(state,action)=>{
        state.loading=false;
        state.cocktails=action.payload.drinks;
-   },
-   [fetchSearchCocktails.rejected]:(state,action)=>{
+   })
+   .addCase(fetchSearchCocktails.rejected,(state,action)=>{
        state.loading=false;
        state.error= action.payload;
-   },
+   })
     }
 })
 

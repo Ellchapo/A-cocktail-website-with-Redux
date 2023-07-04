@@ -44,19 +44,19 @@ const HomePage = () => {
   }
   return ( 
     <>
-    <div className='container'>
-      <div className='row'>
+    <div className='container '>
+      <div className='row  row-cols-1 row-cols-sm-2 row-cols-md-4'>
              {
               modifiedCocktails.map((item)=>{
                 return(
-          <div className="col-md-3 mt-3 m-1" key="{item.id}">
+          <div className="col -md-3 mt-2  " key={item.id}>
   <div className="card" style={{width: '15rem'}}>
     <img src={item.img} className="card-img-top" alt={item.name} />
-    <div className="card-body">
-      <h5 className="card-title">{item.name}</h5>
-      <h5 className="card-title">{item.glass}</h5>
-      <p className="card-text">{item.info}</p>
-      <Link to={`/products/${item.id}`} className="btn btn-primary">Details</Link>
+    <div className="card-body ">
+      <h5 className="card-title text-success">{item.name}</h5>
+      <h5 className="card-title text-success">{item.glass}</h5>
+      <p className="card-text text-success">{item.info}</p>
+      <Link to={`/products/${item.id}`} className="btn btn-success">Details</Link>
     </div>
   </div>
 </div>
