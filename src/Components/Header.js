@@ -17,7 +17,7 @@ const Header = () => {
   };
   return (
     <>
-   <nav className="navbar navbar-expand-lg bg-body-tertiary">
+   <nav className="navbar navbar-expand-lg bg-dark">
   <div className="container-fluid bg-dark mt-0 mb-0 ">
     <Link className="navbar-brand text-success" to="/"><FaCocktail color='brown'/>Cocktails</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
