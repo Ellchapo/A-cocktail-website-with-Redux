@@ -45,7 +45,8 @@ const ProductDetails = () => {
                 <div className='col-md-5'>
                   <img src={img} alt={name} height={300} width={300}></img>
                 </div>
-                <div className='col-md-5'>
+                <div className='col-md-5 bg-light '>
+                
                     <h2 className='text-success'>Name: {name}</h2>
                     <p className='mt-1 text-success'>category: {category}</p>
                     <p className='text-success'>Info : {info}</p>
